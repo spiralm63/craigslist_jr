@@ -1,0 +1,28 @@
+downloaded sinatra skeleton and changed folder name to craigslist jr.
+
+ran bundle
+
+Create the database, ran 
+  rake db:create
+          -- it already existed on this machine, so had to run rake db:drop, and then I was able to succeessfully rerun rake db:created
+
+Then I created the models:
+  rake generate:model NAME=Post
+  rake generate:model NAME=Category
+
+Then the migrations:
+  rake generate:migration NAME=create_posts
+  rake generate:migration NAME=create_categories
+
+Then I modified the migrations by adding the create_table :table_name do |t| routine to the files (look in the migration files to see)
+
+Then I ran:
+  rake db:migrate
+
+Then I did a git commit:
+
+git init
+git add  .
+git commit -m "first commit"
+git remote add origin https://github.com/spiralm63/sinatra_sandbox.git
+git push -u origin master  

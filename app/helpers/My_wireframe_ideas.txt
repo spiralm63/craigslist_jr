@@ -1,0 +1,55 @@
+What a Wireframe Is: (excerpts from wikipedia)
+    A website wireframe, also known as a page schematic or screen blueprint, is a visual guide that represents the skeletal framework of a website.[1] 
+
+    Wireframes are created for the purpose of arranging elements to best accomplish a particular purpose. 
+
+    The wireframe depicts the page layout or arrangement of the website’s content, including interface elements and navigational systems, and how they work together.[2] 
+
+    The wireframe focuses on what a screen does, not what it looks like.[
+
+    Wireframes can be pencil drawings or sketches on a whiteboard, or they can be produced by means of a broad array of free or commercial software applications. Wireframes are generally created by business analysts, user experience designers, developers, visual designers and other roles with expertise in interaction design, information architecture and user research.
+
+    Wireframes focus on:
+    --The kinds of information displayed
+    --The range of functions available
+    --The relative priorities of the information and functions
+    --The rules for displaying certain kinds of information
+    --The effect of different scenarios on the display[5]
+
+
+My Wireframe For Craigslist Jr:
+
+The application will have two core models:
+-- Post: which belongs to Category, and
+-- Category: which has many Posts
+
+Pages will include:
+-- A page that lists all the categories
+-- A page that lists all the postings in a given category
+-- A page that lets someone create a new posting in a given category
+-- A page that lets someone who has created a page return to edit/update the page
+
+User Authentication
+There is no user authentication. Instead, when someone creates a post they're given a special "secret" URL that grants them powers to edit that post that looks like
+          http://craigslist.com/post/123/edit?key=kjansd812
+The key is randomly generated. The person is given their "edit URL" after they successfully create a post. Anyone with this URL can edit the post.
+
+Fields a post will have:
+-- title
+-- price
+-- description
+-- poster_email
+
+Fields a category will have:
+-- category_name
+
+Controller Structure
+We'll want URLs that look like /categories/123 and /posts/456. We'll be using both get and post methods.
+
+
+Core Features:
+-- Choose a category to browse
+-- View all postings in a particular category
+-- View a particular posting
+-- Create my own posting
+-- Edit my postings by using the "secret key" that I get after creating my posting
