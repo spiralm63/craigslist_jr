@@ -1,0 +1,20 @@
+Category.create!(category_name: 'Furniture')
+Category.create!(category_name: 'Computers')
+Category.create!(category_name: 'Autos')
+Category.create!(category_name: 'Tools')
+Category.create!(category_name: 'Appliances')
+
+Post.create!(category_id: 1, title: 'IKEA bookshelf', price: '$15', description: 'gently used', poster_email: 'jrt@gmail.com')
+Post.create!(category_id: 1, title: 'coffee table', price: '$10', description: 'walnut MCM', poster_email: 'bbt@gmail.com')
+Post.create!(category_id: 2, title: 'vintage Lisa', price: '$1500', description: 'still works!', poster_email: 'kowabunga@gmail.com')
+Post.create!(category_id: 2, title: 'MBP Retina 13', price: '$1200', description: 'perfect condition, 2012', poster_email: 'abba@gmail.com')
+Post.create!(category_id: 3, title: '52 Chevy Truck', price: '$28000', description: 'fully restored', poster_email: 'carsrus@gmail.com')
+Post.create!(category_id: 3, title: 'Honda Odyssey', price: '$12000', description: 'great shape, blue, 60,000 miles', poster_email: 'lalalalaa@gmail.com')
+Post.create!(category_id: 3, title: 'Ford Festiva', price: '$500', description: 'hunk a rolling junk! 400,000 miles', poster_email: 'junkyjunk@gmail.com')
+Post.create!(category_id: 4, title: 'chainsaw', price: '$30', description: 'sized for small hands', poster_email: 'alex@gmail.com')
+Post.create!(category_id: 4, title: 'chipper', price: '$100', description: '2008, gas powered', poster_email: 'ambergris@gmail.com')
+Post.create!(category_id: 5, title: 'blender', price: '$10', description: 'good in a pinch, old but works', poster_email: 'arun@gmail.com')
+Post.create!(category_id: 5, title: 'toaster', price: '$3', description: 'plain old fashioned', poster_email: 'arun@gmail.com')
+Post.create!(category_id: 5, title: 'toaster over', price: '$20', description: 'cuisinart, almost new condition', poster_email: 'arun@gmail.com')
+
+

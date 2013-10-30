@@ -2,27 +2,39 @@ downloaded sinatra skeleton and changed folder name to craigslist jr.
 
 ran bundle
 
-Create the database, ran 
+Then I created the database, ran 
   rake db:create
-          -- it already existed on this machine, so had to run rake db:drop, and then I was able to succeessfully rerun rake db:created
+          -- it already existed on this machine, so had to run rake db:drop, and then I was able to succeessfully rerun rake db:create
 
 Then I created the models:
   rake generate:model NAME=Post
   rake generate:model NAME=Category
+      RESULT: Two new files were created in the app/models folder for me
+
 
 Then the migrations:
   rake generate:migration NAME=create_posts
   rake generate:migration NAME=create_categories
+      RESULT: Two new files were created in the db/migrate folder for me
 
-Then I modified the migrations by adding the create_table :table_name do |t| routine to the files (look in the migration files to see)
+Then I modified the migrations files (in the db/migrate folder) by adding the 
+    create_table :table_name do |t| 
+      routine to the files (look in the migration files to see)
 
 Then I ran:
   rake db:migrate
 
 Then I did a git commit:
+    git init
+    git add  .
+    git commit -m "first commit"
+    git remote add origin https://github.com/spiralm63/craigslist_jr.git
+    git push -u origin master  
 
-git init
-git add  .
-git commit -m "first commit"
-git remote add origin https://github.com/spiralm63/sinatra_sandbox.git
-git push -u origin master  
+Then I added active record relationships to the models (in the app/models folder for me):
+ for post.rb:
+  belongs_to :category
+ for category.rb:
+  has_many :posts
+
+Then I tried to create a few lines in the db/seeds.rb file  
